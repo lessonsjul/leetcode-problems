@@ -13,12 +13,8 @@ import java.util.stream.IntStream;
  */
 
 public class MonotonicStack {
-    public static void main(String[] args) {
-        var result = nextGreaterElement(new int[]{1, 4, 6, 3, 2, 7});
 
-        System.out.println(Arrays.toString(result));
-    }
-    public static int[] nextGreaterElement(int[] array) {
+    public int[] nextGreaterElement(int[] array) {
         int size = array.length;
         var stack = new Stack<Integer>();
         int[] result = IntStream.range(0, size).map(__ -> -1).toArray();
